@@ -1,3 +1,7 @@
+Template.header.userId = function() {
+  return Meteor.userId();
+}
+
 Template.threads.threads = function() {
   return Threads.find();
 };

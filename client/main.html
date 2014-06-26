@@ -7,12 +7,21 @@
   {{>yield}}
 </template>
 
+<template name="home">
+  Login and click on profile to update your profile
+</template>
+
 <template name="header">
   <header class="header">
     {{>loginButtons}}
+    <ul>
+      {{#if currentUser}}
+      <li><a href="/profiles/{{userId}}">Profile</a></li>
+      {{/if}}
+    </ul>
+    {{>notifications}}
   </header>
 </template>
-
 <template name="threads">
   <ul>
     {{#each threads}}<li><a href="{{pathFor "chatThread"}}">{{name}}</a></li>{{/each}}
