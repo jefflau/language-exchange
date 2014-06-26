@@ -1,0 +1,40 @@
+<head>
+  <title>Chat app example</title>
+</head>
+
+<template name="layout">
+  {{>header}}
+  {{>yield}}
+</template>
+
+<template name="header">
+  <header class="header">
+    {{>loginButtons}}
+  </header>
+</template>
+
+<template name="threads">
+  <ul>
+    {{#each threads}}<li><a href="{{pathFor "chatThread"}}">{{name}}</a></li>{{/each}}
+  </ul>
+  <form>
+    <input type="text" id="threadName">
+    <input type="submit" value="Add Thread">
+  </form>
+</template>
+
+<template name="chatThread">
+  <div class="chat-thread">
+    {{#with thread}}
+    <ul>
+      {{#each messages}}
+      <li class="message">{{name}}: {{message}}</li>
+      {{/each}}
+    </ul>
+    {{/with}}
+    <form>
+      <input type="text" id="text">
+      <input type="submit">
+    </form>
+  </div>
+</template>

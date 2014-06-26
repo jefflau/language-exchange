@@ -1,0 +1,11 @@
+body {
+  padding: 0;
+  margin: 0; }
+
+ul {
+  padding: 0; }
+
+.message {
+  background: #eee;
+  padding: 5px;
+  list-style: none; }
