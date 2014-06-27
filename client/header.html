@@ -1,0 +1,11 @@
+<template name="header">
+  <header class="header">
+    {{>loginButtons}}
+    <ul>
+      {{#if currentUser}}
+      <li><a href="/profiles/{{userId}}">Profile</a></li>
+      {{/if}}
+    </ul>
+    {{>notifications}}
+  </header>
+</template>

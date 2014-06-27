@@ -1,0 +1,15 @@
+<template name="chatThread">
+  <div class="chat-thread">
+    {{#with thread}}
+    <ul>
+      {{#each messages}}
+      <li class="message">{{name}}: {{message}}</li>
+      {{/each}}
+    </ul>
+    {{/with}}
+    <form>
+      <input type="text" id="text">
+      <input type="submit">
+    </form>
+  </div>
+</template>
