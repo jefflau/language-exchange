@@ -2,6 +2,7 @@
   "packages": {
     "iron-router": {},
     "notifications": {},
-    "accounts-entry": {}
+    "accounts-entry": {},
+    "font-awesome": {}
   }
 }

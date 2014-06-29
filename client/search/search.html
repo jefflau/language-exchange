@@ -1,8 +1,16 @@
 <template name="search">
-  <p>Describe your language partner</p>
-  <form>
-    <label for="speaks">Speaks:</label><input id="speaks" type="text" value="{{userTargetLanguage}}">
-    <label for="speaks">is learning:</label><input id="learning" type="text" value="{{userNativeLanguage}}">
-    <input type="submit" value="search">
-  </form>
+  <section class="search">
+    <p class="search-intro">Describe your language partner</p>
+    <form>
+      <div class="input-group cf">
+        <label class="label search-label" for="speaks">Speaks:</label>
+        <input class="input search-input" id="speaks" type="text" value="{{userTargetLanguage}}">
+      </div>
+      <div class="input-group cf">
+        <label class="label search-label" for="speaks">is learning:</label>
+        <input id="learning" class="input search-input" type="text" value="{{userNativeLanguage}}">
+      </div>
+      <input class="button search-submit" type="submit" value="Find me a partner!">
+    </form>
+  </section>
 </template>

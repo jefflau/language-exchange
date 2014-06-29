@@ -2,16 +2,27 @@
   <form class="profile">
     <label for="firstName">First Name:</label>
     <input type="text" id="firstName" value="{{profile.firstName}}">
+
     <label for="lastName">Last Name</label>
     <input type="text" id="lastName" value="{{profile.lastName}}">
+
+    <label for="age">Age</label>
+    <input type="text" id="age" value="{{profile.age}}">
+
     <label for="country">Country:</label>
     <input type="text" id="country" value="{{profile.country}}">
+
     <label for="city">City</label>
     <input type="text" id="city" value="{{profile.city}}">
+
     <label for="targetLanguage">I want to learn:</label>
     <input type="text" id="targetLanguage" value="{{profile.targetLanguage}}">
+
     <label for="nativeLanguage">My native language is:</label>
     <input type="text" id="nativeLanguage" value="{{profile.nativeLanguage}}">
+
+    <label for="bio">Bio:</label>
+    <textarea id="bio">{{profile.bio}}</textarea>
     <input type="submit" value="Save Changes">
   </form>
 </template>
