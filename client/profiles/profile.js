@@ -7,7 +7,9 @@ Template.profile.events({
       country: template.find('#country').value,
       city: template.find('#city').value,
       targetLanguage: template.find('#targetLanguage').value,
-      nativeLanguage: template.find('#nativeLanguage').value
+      nativeLanguage: template.find('#nativeLanguage').value,
+      age: template.find('#age').value,
+      bio: template.find('#bio').value
     },
     user = {
       profile: profile

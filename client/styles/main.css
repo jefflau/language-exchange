@@ -1,11 +1,141 @@
+@import url(http://fonts.googleapis.com/css?family=Fira+Sans:700|Roboto:400,500);
+/* UTILITY */
+.cf:before,
+.cf:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */ }
+
+.cf:after {
+  clear: both; }
+
+/* HEADER */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
 body {
+  font-family: "Roboto";
   padding: 0;
-  margin: 0; }
+  margin: 0;
+  margin-left: 120px; }
+
+.header {
+  background: #F67114;
+  height: 100%;
+  padding: 15px 0 0 0;
+  width: 120px;
+  position: fixed;
+  left: 0;
+  top: 0; }
+
+/* Shared styles */
+.button {
+  background: #80ccee;
+  font-size: 14px;
+  border: 0;
+  color: white;
+  padding: 15px 20px; }
+  .button:hover {
+    background: rgba(128, 204, 238, 0.8); }
+
+.label, .search-label {
+  float: left;
+  font-family: Roboto-Bold;
+  font-size: 14px;
+  margin-top: 5px;
+  color: #A2A2A2;
+  text-transform: uppercase; }
+
+.input {
+  border: 1px #ccc solid;
+  -webkit-box-shadow: inset 0px 1px 3px 0px rgba(0, 0, 0, 0.13);
+  box-shadow: inset 0px 1px 3px 0px rgba(0, 0, 0, 0.13);
+  float: right;
+  padding: 8px 8px 8px 5px;
+  width: 250px; }
+
+.input-group {
+  margin-bottom: 15px; }
+
+/* Search */
+.search {
+  padding-left: 25px;
+  width: 400px; }
+
+.search-intro {
+  letter-spacing: -1px;
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 20px; }
+
+.search-submit {
+  float: right; }
+
+.main-nav {
+  list-style: none;
+  width: 100%; }
+  .main-nav li {
+    padding: 15px 0 15px 15px;
+    font-size: 14px;
+    width: 100%; }
+    .main-nav li:hover {
+      background: rgba(255, 255, 255, 0.3); }
+  .main-nav a {
+    color: white;
+    text-decoration: none; }
+
+.brand {
+  color: white;
+  display: block;
+  font-family: 'Fira Sans', sans-serif;
+  font-size: 18px;
+  line-height: 1em;
+  padding-left: 15px;
+  text-transform: uppercase;
+  text-decoration: none; }
+  .brand span {
+    color: rgba(255, 255, 255, 0.5); }
+
+/* Results */
+.arrow {
+  color: #D8D8D8;
+  font-size: 64px;
+  position: absolute;
+  top: 50%;
+  margin-top: -32px;
+  right: 10px; }
+
+.user {
+  border-bottom: 2px solid #D8D8D8;
+  padding: 35px 30px 40px 30px;
+  position: relative;
+  width: 550px; }
+  .user .label {
+    margin-top: 2px;
+    margin-right: 10px; }
+  .user > div {
+    float: left;
+    height: 45px;
+    width: 245px; }
+  .user .bio {
+    width: 100%; }
+  .user:hover .arrow {
+    color: #F67114; }
+
+.chat-thread {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); }
 
 ul {
   padding: 0; }
 
 .message {
   background: #eee;
-  padding: 5px;
   list-style: none; }

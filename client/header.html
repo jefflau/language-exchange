@@ -1,7 +1,9 @@
 <template name="header">
   <header class="header">
-    {{>loginButtons}}
-    <ul>
+    <a class="brand" href="/">Language<br>Swap<span>.in</span></a>
+    <ul class="main-nav">
+      <li><a href="/">Find a Partner</a></li>
+      <li><a href="#0">Messages</a></li>
       {{#if currentUser}}
       <li><a href="/profiles/{{userId}}">Profile</a></li>
       {{/if}}
