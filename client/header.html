@@ -2,10 +2,13 @@
   <header class="header">
     <a class="brand" href="/">Language<br>Swap<span>.in</span></a>
     <ul class="main-nav">
+      {{#if currentUser}}
       <li><a href="/">Find a Partner</a></li>
       <li><a href="#0">Messages</a></li>
-      {{#if currentUser}}
       <li><a href="/profiles/{{userId}}">Profile</a></li>
+      <li><a href="/sign-out">Sign out</a></li>
+      {{else}}
+      <li><a href="/sign-in">Sign in</a></li>
       {{/if}}
     </ul>
     {{>notifications}}

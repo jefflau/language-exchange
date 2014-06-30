@@ -121,7 +121,9 @@ body {
     height: 45px;
     width: 245px; }
   .user .bio {
-    width: 100%; }
+    height: auto;
+    width: 100%;
+    margin-bottom: 20px; }
   .user:hover .arrow {
     color: #F67114; }
 
