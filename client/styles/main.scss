@@ -255,5 +255,9 @@ body {
     margin: 0;
     background: #F67114;
     width: 100%;
+    &:hover {
+      cursor: pointer;
+      background: lighten(#F67114, 10%);
+    }
   }
 }

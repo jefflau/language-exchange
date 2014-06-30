@@ -210,3 +210,6 @@ body {
     margin: 0;
     background: #F67114;
     width: 100%; }
+    .chat-input [type=submit]:hover {
+      cursor: pointer;
+      background: #f88f45; }
