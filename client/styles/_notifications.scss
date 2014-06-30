@@ -1,0 +1,14 @@
+ul.notifications {
+  top: 10px;
+  right: 10px;
+}
+
+.notification {
+  .message {
+    background: transparent;
+  }
+}
+
+li.notification.info {
+  background-color: #80ccee;
+}

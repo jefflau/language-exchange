@@ -1,5 +1,5 @@
 Template.chatThread.thread = function() {
-  return Threads.findOne({_id: Router.current().params._id});
+  return Threads.findOne({_id: Session.get('currentChat')});
 };
 
 Template.chatThread.events({
@@ -7,9 +7,10 @@ Template.chatThread.events({
     e.preventDefault();
     var message = {
       message: template.find('#text').value,
-      name: Meteor.user().emails[0].address
+      name: Meteor.user().profile.firstName,
+      dateCreated: new Date()
     };
 
-    Threads.update(Router.current().params._id, {$push: {messages: message}});
+    Threads.update(Session.get('currentChat'), {$push: {messages: message}});
   }
 });

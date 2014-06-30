@@ -3,13 +3,16 @@
     {{#with thread}}
     <ul>
       {{#each messages}}
-      <li class="message">{{name}}: {{message}}</li>
+        <li class="message">
+          <span class="name">{{name}}:</span>
+          {{message}}
+        </li>
       {{/each}}
     </ul>
     {{/with}}
-    <form>
-      <input type="text" id="text">
-      <input type="submit">
+    <form class="chat-input">
+      <textarea class="input" type="text" id="text"></textarea>
+      <input type="submit" value="Send">
     </form>
   </div>
 </template>
