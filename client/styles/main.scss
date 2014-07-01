@@ -3,20 +3,20 @@
 
 /* UTILITY */
 
-.cf:before,
-.cf:after {
-    content: " "; /* 1 */
-    display: table; /* 2 */
-}
+@import 'utility';
 
-.cf:after {
-    clear: both;
-}
+/* NOTIFICATIONS */
+
+@import 'notifications';
 
 /* HEADER */
 
 * {
   box-sizing: border-box;
+}
+
+ul {
+  padding: 0;
 }
 
 body {
@@ -136,6 +136,10 @@ body {
   right: 10px;
 }
 
+.users {
+  height: 100%;
+}
+
 
 .user {
   border-bottom: 2px solid #D8D8D8;
@@ -153,7 +157,9 @@ body {
     width: 245px;
   }
   .bio {
+    height: auto;
     width: 100%;
+    margin-bottom: 20px;
   }
 
   &:hover {
@@ -163,16 +169,95 @@ body {
   }
 }
 
+/* PROFILE */
 
-.chat-thread {
-  @include centerer;
+.profile {
+  padding-top: 20px;
+  width: 550px;
+  .label {
+    height: 31px;
+    padding-left: 20px;
+    padding-top: 3px;
+    margin-top: 0;
+    margin-bottom: 20px;
+    width: 200px;
+    text-align: left;
+  }
+  .input {
+    height: 31px;
+    float: right;
+    margin-bottom: 20px;
+    width: 325px;
+  }
+
+  .label-bio {
+    height: 150px;
+  }
+
+  #bio {
+    height: 150px;
+    width: 325px;
+  }
+
+  .profile-save {
+    float: right;
+    margin-bottom: 20px;
+  }
 }
 
-ul {
-  padding: 0;
+/* Chat Thread */
+
+.aside {
+  float: left;
+  height: 100%;
+  overflow-y: scroll;
+  position: fixed;
+  left: 550+120px;
+  top: 0;
+}
+
+
+.chat-thread {
+  background: #F5F5F5;
+  overflow-y: scroll;
+  height: 100%;
+  height: calc(100% - 140px);
+  width: 350px;
+  ul {
+    padding: 32px;
+  }
 }
 
 .message {
-  background: #eee;
+  background: #fff;
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 10px;
   list-style: none;
+}
+
+.chat-input {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  textarea {
+    height: 100px;
+    margin: 0;
+    width: 100%;
+  }
+  [type=submit] {
+    border: 0;
+    color: white;
+    font-size: 18px;
+    padding: 10px 0;
+    display: block;
+    margin: 0;
+    background: #F67114;
+    width: 100%;
+    &:hover {
+      cursor: pointer;
+      background: lighten(#F67114, 10%);
+    }
+  }
 }

@@ -6,6 +6,7 @@ Template.search.events({
       targetLanguage: template.find('#learning').value
     };
     Session.set('searchQuery', form);
+    Session.set('currentChat', null);
 
     Router.go('results');
   }
