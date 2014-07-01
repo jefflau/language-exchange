@@ -221,7 +221,7 @@ body {
   background: #F5F5F5;
   overflow-y: scroll;
   height: 100%;
-  height: calc(100% - 140px);
+  height: calc(100% - 72px);
   width: 350px;
   ul {
     padding: 32px;
@@ -241,8 +241,7 @@ body {
   bottom: 0;
   right: 0;
   width: 100%;
-  textarea {
-    height: 100px;
+  .input {
     margin: 0;
     width: 100%;
   }
