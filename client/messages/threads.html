@@ -1,9 +1,0 @@
-<template name="threads">
-  <ul>
-    {{#each threads}}<li><a href="{{pathFor "chatThread"}}">{{name}}</a></li>{{/each}}
-  </ul>
-  <form>
-    <input type="text" id="threadName">
-    <input type="submit" value="Add Thread">
-  </form>
-</template>
