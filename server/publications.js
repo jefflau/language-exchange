@@ -9,3 +9,7 @@ Meteor.publish('allMessages', function() {
 Meteor.publish('myMessages', function(id) {
   return Threads.find({users: id});
 });
+
+Meteor.publish('allLanguages', function() {
+  return Languages.find();
+});

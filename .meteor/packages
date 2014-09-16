@@ -5,9 +5,9 @@
 
 standard-app-packages
 insecure
-iron-router
+iron:router
 accounts-ui
 accounts-password
-notifications
-accounts-entry
-font-awesome
+mdj:notifications
+joshowens:accounts-entry
+natestrauser:font-awesome

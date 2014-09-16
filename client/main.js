@@ -6,3 +6,5 @@ Meteor.startup(function(){
     passwordSignupFields: 'EMAIL_ONLY'
   };
 });
+
+Meteor.subscribe('allLanguages');
