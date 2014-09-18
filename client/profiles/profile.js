@@ -14,7 +14,7 @@ Template.profile.events({
     },
     user = {
       profile: profile
-    }
+    };
 
     Meteor.call('updateUser', user, function(err){
       if(err) {
