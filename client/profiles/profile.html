@@ -16,10 +16,18 @@
     <input class="input" type="text" id="city" value="{{profile.city}}">
 
     <label for="targetLanguage" class="label">I want to learn:</label>
-    <input class="input" type="text" id="targetLanguage" value="{{profile.targetLanguage}}">
+    <select class="input" id="targetLanguage">
+      {{#each languages}}
+        <option {{selected ../profile.targetLanguage this}} value="{{stringifyObject this}}">{{this.name}} {{this.nativeName}}</option>
+      {{/each}}
+    </select>
 
     <label for="nativeLanguage" class="label">My native language is:</label>
-    <input class="input" type="text" id="nativeLanguage" value="{{profile.nativeLanguage}}">
+    <select class="input" id="nativeLanguage">
+      {{#each languages}}
+        <option {{selected ../profile.nativeLanguage this}} value="{{stringifyObject this}}">{{this.name}} {{this.nativeName}}</option>
+      {{/each}}
+    </select>
 
     <label for="bio" class="label label-bio">Bio:</label>
     <textarea id="bio" class="input">{{profile.bio}}</textarea>
