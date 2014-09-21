@@ -4,11 +4,19 @@
     <form>
       <div class="input-group cf">
         <label class="label search-label" for="speaks">Speaks:</label>
-        <input class="input search-input" id="speaks" type="text" value="{{userTargetLanguage}}">
+        <select class="input" id="targetLanguage">
+          {{#each languages}}
+            <option {{selectedLanguage userTargetLanguage this}} value="{{stringifyObject this}}">{{this.name}} {{this.nativeName}}</option>
+          {{/each}}
+        </select>
       </div>
       <div class="input-group cf">
         <label class="label search-label" for="speaks">is learning:</label>
-        <input id="learning" class="input search-input" type="text" value="{{userNativeLanguage}}">
+        <select class="input" id="targetLanguage">
+          {{#each languages}}
+            <option {{selectedLanguage userNativeLanguage this}} value="{{stringifyObject this}}">{{this.name}}</option>
+          {{/each}}
+        </select>
       </div>
       <input class="button search-submit" type="submit" value="Find me a partner!">
     </form>

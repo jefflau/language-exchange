@@ -25,17 +25,3 @@ Template.profile.events({
     });
   }
 });
-
-Template.profile.helpers({
-  languages: function() {
-    return Languages.find();
-  },
-
-  selected: function(language, option) {
-    return language.code === option.code ? 'selected' : '';
-  },
-
-  stringifyObject: function(val, options) {
-    return EJSON.stringify(val, options);
-  }
-});

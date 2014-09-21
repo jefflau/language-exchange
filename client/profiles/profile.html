@@ -18,14 +18,14 @@
     <label for="targetLanguage" class="label">I want to learn:</label>
     <select class="input" id="targetLanguage">
       {{#each languages}}
-        <option {{selected ../profile.targetLanguage this}} value="{{stringifyObject this}}">{{this.name}} {{this.nativeName}}</option>
+        <option {{selectedLanguage ../profile.targetLanguage this}} value="{{stringifyObject this}}">{{this.name}}</option>
       {{/each}}
     </select>
 
     <label for="nativeLanguage" class="label">My native language is:</label>
     <select class="input" id="nativeLanguage">
       {{#each languages}}
-        <option {{selected ../profile.nativeLanguage this}} value="{{stringifyObject this}}">{{this.name}} {{this.nativeName}}</option>
+        <option {{selectedLanguage ../profile.nativeLanguage this}} value="{{stringifyObject this}}">{{this.name}}</option>
       {{/each}}
     </select>
 
