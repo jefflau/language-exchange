@@ -235,6 +235,9 @@ body {
   padding: 15px;
   margin-bottom: 10px;
   list-style: none;
+  &.owned {
+    background: #D6F2FF;
+  }
 }
 
 .chat-input {

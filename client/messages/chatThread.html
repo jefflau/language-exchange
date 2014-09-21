@@ -3,10 +3,17 @@
     {{#with thread}}
     <ul>
       {{#each messages}}
-        <li class="message">
-          <span class="name">{{name}}:</span>
-          {{message}}
-        </li>
+        {{#if ownMessage userId}}
+          <li class="message owned">
+            <span class="name">You:</span>
+            {{message}}
+          </li>
+        {{else}}
+          <li class="message">
+            <span class="name">{{name}}:</span>
+            {{message}}
+          </li>
+        {{/if}}
       {{/each}}
     </ul>
     {{/with}}
