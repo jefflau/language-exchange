@@ -8,7 +8,7 @@ Template.profile.events({
       country: template.find('#country').value,
       city: template.find('#city').value,
       targetLanguage: EJSON.parse(template.find('#targetLanguage').value),
-      nativeLanguage: EJSON.parse(template.find('#targetLanguage').value),
+      nativeLanguage: EJSON.parse(template.find('#nativeLanguage').value),
       age: template.find('#age').value,
       bio: template.find('#bio').value
     },
