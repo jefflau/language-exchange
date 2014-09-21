@@ -6,7 +6,7 @@
         <label class="label search-label" for="speaks">Speaks:</label>
         <select class="input" id="speaks">
           {{#each languages}}
-            <option {{selectedLanguage userTargetLanguage this}} value="{{this.code}}">{{this.name}} {{this.nativeName}}</option>
+            <option {{selectedLanguage userTargetLanguage this}} value="{{this.code}}">{{this.name}}</option>
           {{/each}}
         </select>
       </div>
