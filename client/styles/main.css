@@ -120,6 +120,7 @@ li.notification.info {
 
 .user {
   border-bottom: 2px solid #D8D8D8;
+  border-right: 1px solid #D8D8D8;
   padding: 35px 30px 40px 30px;
   position: relative;
   width: 550px; }
@@ -129,7 +130,7 @@ li.notification.info {
   .user > div {
     float: left;
     height: 45px;
-    width: 245px; }
+    width: 243px; }
   .user .bio {
     height: auto;
     width: 100%;
