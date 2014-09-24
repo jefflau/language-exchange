@@ -1,0 +1,20 @@
+.search {
+  padding-left: 25px;
+  width: 400px;
+}
+
+.search-intro {
+
+  letter-spacing: -1px;
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.search-submit {
+  float: right;
+}
+
+.search-label {
+  @extend %label;
+}

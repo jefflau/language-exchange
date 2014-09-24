@@ -1,0 +1,40 @@
+.header {
+  background: #F67114;
+  height: 100%;
+  padding: 15px 0 0 0;
+  width: 120px;
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+
+.main-nav {
+  list-style: none;
+  width: 100%;
+  li {
+    padding: 15px 0 15px 15px;
+    font-size: 14px;
+    width: 100%;
+    &:hover {
+      background: rgba(255, 255, 255, 0.3);
+    }
+  }
+  a {
+    color: white;
+    text-decoration: none;
+  }
+}
+
+.brand {
+  color: white;
+  display: block;
+  font-family: 'Fira Sans', sans-serif;
+  font-size: 18px;
+  line-height: 1em;
+  padding-left: 15px;
+  text-transform: uppercase;
+  text-decoration: none;
+  span {
+    color: rgba(255, 255, 255, 0.5);
+  }
+}

@@ -1,9 +1,8 @@
 <template name="messages">
   <div class="users">
     {{#each threads}}
-    {{firstName}}
       <div class="user cf">
-        <div class="name"></div>
+        <div class="name">{{firstName}}</div>
       </div>
     {{/each}}
   </div>

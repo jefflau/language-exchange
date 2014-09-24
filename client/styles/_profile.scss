@@ -1,0 +1,33 @@
+.profile {
+  padding-top: 20px;
+  width: 550px;
+  .label {
+    height: 31px;
+    padding-left: 20px;
+    padding-top: 3px;
+    margin-top: 0;
+    margin-bottom: 20px;
+    width: 200px;
+    text-align: left;
+  }
+  .input {
+    height: 31px;
+    float: right;
+    margin-bottom: 20px;
+    width: 325px;
+  }
+
+  .label-bio {
+    height: 150px;
+  }
+
+  #bio {
+    height: 150px;
+    width: 325px;
+  }
+
+  .profile-save {
+    float: right;
+    margin-bottom: 20px;
+  }
+}
