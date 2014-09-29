@@ -39,4 +39,8 @@
       color: #F67114;
     }
   }
+  @include bp(baby-bear) {
+    border-right: none;
+    width: 100%;
+  }
 }

@@ -1,6 +1,10 @@
 .search {
   padding-left: 25px;
   width: 400px;
+
+  @include bp(baby-bear) {
+  	width: 100%;
+  }
 }
 
 .search-intro {

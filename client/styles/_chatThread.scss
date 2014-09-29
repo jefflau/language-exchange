@@ -5,6 +5,11 @@
   position: fixed;
   left: 550+120px;
   top: 0;
+  @include bp(baby-bear) {
+    position: relative;
+    left: auto;
+    top: auto;
+  }
 }
 
 
@@ -16,6 +21,10 @@
   width: 350px;
   ul {
     padding: 32px;
+  }
+
+  @include bp(baby-bear) {
+    width: 100%;
   }
 }
 

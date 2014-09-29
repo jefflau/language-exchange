@@ -10,15 +10,21 @@ Template.results.events({
 
     if(threadExists) {
       Session.set('currentChat', threadExists._id);
+      $('body').addClass('active-sidebar');
     } else {
       Meteor.call('createChatThread', ids, function(err, id){
         if(err){
           console.log(err);
         } else {
           Session.set("currentChatThread", id);
+          $('body').addClass('active-sidebar');
         }
       });
     }
+  },
+  'click .aside-button': function(e, template) {
+    console.log('shit happened')
+    $('body').removeClass('active-sidebar');
   }
 });
 

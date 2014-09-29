@@ -1,14 +1,16 @@
 <template name="messages">
-  <div class="users">
-    {{#each threads}}
-      <div class="user cf">
-        <div class="name">{{firstName}}</div>
-      </div>
-    {{/each}}
+  <div class="main" role="main">
+    <div class="users">
+      {{#each threads}}
+        <div class="user cf">
+          <div class="name">{{firstName}}</div>
+        </div>
+      {{/each}}
+    </div>
+    {{#if currentChat}}
+      <aside class="aside">
+        {{>chatThread}}
+      </aside>
+    {{/if}}
   </div>
-  {{#if currentChat}}
-    <aside class="aside">
-      {{>chatThread}}
-    </aside>
-  {{/if}}
 </template>

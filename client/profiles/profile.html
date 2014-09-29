@@ -1,36 +1,38 @@
 <template name="profile">
-  <form class="profile">
-    <label for="firstName" class="label">First Name:</label>
-    <input class="input" type="text" id="firstName" value="{{profile.firstName}}">
+  <div class="main" role="main">
+    <form class="profile">
+      <label for="firstName" class="label">First Name:</label>
+      <input class="input" type="text" id="firstName" value="{{profile.firstName}}">
 
-    <label for="lastName" class="label">Last Name:</label>
-    <input class="input" type="text" id="lastName" value="{{profile.lastName}}">
+      <label for="lastName" class="label">Last Name:</label>
+      <input class="input" type="text" id="lastName" value="{{profile.lastName}}">
 
-    <label for="age" class="label">Age:</label>
-    <input class="input" type="text" id="age" value="{{profile.age}}">
+      <label for="age" class="label">Age:</label>
+      <input class="input" type="text" id="age" value="{{profile.age}}">
 
-    <label for="country" class="label">Country:</label>
-    <input class="input" type="text" id="country" value="{{profile.country}}">
+      <label for="country" class="label">Country:</label>
+      <input class="input" type="text" id="country" value="{{profile.country}}">
 
-    <label for="city" class="label">City:</label>
-    <input class="input" type="text" id="city" value="{{profile.city}}">
+      <label for="city" class="label">City:</label>
+      <input class="input" type="text" id="city" value="{{profile.city}}">
 
-    <label for="targetLanguage" class="label">I want to learn:</label>
-    <select class="input" id="targetLanguage">
-      {{#each languages}}
-        <option {{selectedLanguage ../profile.targetLanguage this}} value="{{stringifyObject this}}">{{this.name}}</option>
-      {{/each}}
-    </select>
+      <label for="targetLanguage" class="label">I want to learn:</label>
+      <select class="input" id="targetLanguage">
+        {{#each languages}}
+          <option {{selectedLanguage ../profile.targetLanguage this}} value="{{stringifyObject this}}">{{this.name}}</option>
+        {{/each}}
+      </select>
 
-    <label for="nativeLanguage" class="label">My native language is:</label>
-    <select class="input" id="nativeLanguage">
-      {{#each languages}}
-        <option {{selectedLanguage ../profile.nativeLanguage this}} value="{{stringifyObject this}}">{{this.name}}</option>
-      {{/each}}
-    </select>
+      <label for="nativeLanguage" class="label">My native language is:</label>
+      <select class="input" id="nativeLanguage">
+        {{#each languages}}
+          <option {{selectedLanguage ../profile.nativeLanguage this}} value="{{stringifyObject this}}">{{this.name}}</option>
+        {{/each}}
+      </select>
 
-    <label for="bio" class="label label-bio">Bio:</label>
-    <textarea id="bio" class="input">{{profile.bio}}</textarea>
-    <input class="button profile-save" type="submit" value="Save Changes">
-  </form>
+      <label for="bio" class="label label-bio">Bio:</label>
+      <textarea id="bio" class="input">{{profile.bio}}</textarea>
+      <input class="button profile-save" type="submit" value="Save Changes">
+    </form>
+  </div>
 </template>

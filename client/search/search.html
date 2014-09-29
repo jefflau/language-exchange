@@ -1,24 +1,26 @@
 <template name="search">
-  <section class="search">
-    <p class="search-intro">Describe your language partner</p>
-    <form>
-      <div class="input-group cf">
-        <label class="label search-label" for="speaks">Speaks:</label>
-        <select class="input" id="speaks">
-          {{#each languages}}
-            <option {{selectedLanguage userTargetLanguage this}} value="{{this.code}}">{{this.name}}</option>
-          {{/each}}
-        </select>
-      </div>
-      <div class="input-group cf">
-        <label class="label search-label" for="learning">is learning:</label>
-        <select class="input" id="learning">
-          {{#each languages}}
-            <option {{selectedLanguage userNativeLanguage this}} value="{{this.code}}">{{this.name}}</option>
-          {{/each}}
-        </select>
-      </div>
-      <input class="button search-submit" type="submit" value="Find me a partner!">
-    </form>
-  </section>
+  <div class="main" role="main">
+    <section class="search">
+      <p class="search-intro">Describe your language partner</p>
+      <form>
+        <div class="input-group cf">
+          <label class="label search-label" for="speaks">Speaks:</label>
+          <select class="input" id="speaks">
+            {{#each languages}}
+              <option {{selectedLanguage userTargetLanguage this}} value="{{this.code}}">{{this.name}}</option>
+            {{/each}}
+          </select>
+        </div>
+        <div class="input-group cf">
+          <label class="label search-label" for="learning">is learning:</label>
+          <select class="input" id="learning">
+            {{#each languages}}
+              <option {{selectedLanguage userNativeLanguage this}} value="{{this.code}}">{{this.name}}</option>
+            {{/each}}
+          </select>
+        </div>
+        <input class="button search-submit" type="submit" value="Find me a partner!">
+      </form>
+    </section>
+  </div>
 </template>

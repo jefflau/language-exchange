@@ -1,11 +1,14 @@
 .header {
-  background: #F67114;
+  background: $brand-color;
   height: 100%;
   padding: 15px 0 0 0;
   width: 120px;
   position: fixed;
   left: 0;
   top: 0;
+  @include bp(baby-bear) {
+    position: relative;
+  }
 }
 
 .main-nav {
@@ -37,4 +40,13 @@
   span {
     color: rgba(255, 255, 255, 0.5);
   }
+}
+
+.nav-button {
+  color: white;
+  padding: 5px 8px;
+  background: #F67114;
+  position: absolute;
+  left: 100%;
+  top: 0;
 }

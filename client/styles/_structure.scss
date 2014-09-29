@@ -6,11 +6,14 @@ ul {
   padding: 0;
 }
 
+html, body {
+  height: 100%;
+}
+
 body {
   font-family: "Roboto";
   padding: 0;
   margin: 0;
-  margin-left: 120px;
 }
 
 
@@ -48,4 +51,91 @@ body {
 
 .input-group {
   margin-bottom: 15px;
+}
+
+[role="navigation"],
+[role="main"],
+[role="complementary"] {
+  transition: .2s all ease;
+}
+
+[role="main"] {
+  margin-left: 120px;
+}
+
+.nav-button {
+  display: none;
+}
+
+.aside-button {
+  background: $brand-color;
+  color: white;
+  padding: 5px 8px;
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+@include bp(baby-bear) {
+
+  [role="navigation"] {
+    margin-left: -120px;
+    float: left;
+  }
+
+  [role="main"] {
+    height: 100%;
+    margin-left: 0;
+    padding-top: 20px;
+    float: left;
+    width: 100%;
+    &:before {
+      content: "";
+      display: block;
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      z-index: -1;
+    }
+  }
+
+  [role="complementary"] {
+    margin-right: -200%;
+    float: right;
+    width: 100%;
+  }
+
+  .active-nav [role="navigation"] {
+    margin-left: 0;
+    width: 80%;
+  }
+  .active-nav [role="main"]{
+    margin-right: -100%;
+    &:before {
+      z-index: 100;
+    }
+  }
+  .active-nav [role="complementary"] {
+    float: right;
+    transition: 0ms;
+  }
+
+  .active-sidebar [role="navigation"] {
+    margin-left: -100%;
+  }
+  .active-sidebar [role="main"] {
+    margin-left: -100%;
+  }
+  .active-sidebar [role="complementary"] {
+    margin-left: 0;
+  }
+
+  .nav-button {
+    display: block;
+  }
+
+  .aside-button {
+    display: block;
+  }
 }
