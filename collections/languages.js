@@ -1,1 +1,1 @@
-Languages = new Meteor.Collection('languages');
+Languages = new Mongo.Collection('languages');

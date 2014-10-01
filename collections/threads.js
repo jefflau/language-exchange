@@ -1,4 +1,4 @@
-Threads = new Meteor.Collection('threads');
+Threads = new Mongo.Collection('threads');
 
 Meteor.methods({
   'createChatThread': function(ids){
