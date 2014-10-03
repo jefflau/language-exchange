@@ -15,9 +15,9 @@ Template.search.events({
 
 Template.search.helpers({
   'userTargetLanguage': function(){
-    return Meteor.user().profile.targetLanguage;
+    return Meteor.userId() ? Meteor.user().profile.targetLanguage : false;
   },
   'userNativeLanguage': function(){
-    return Meteor.user().profile.nativeLanguage;
+    return Meteor.userId() ? Meteor.user().profile.nativeLanguage : false;
   }
 });

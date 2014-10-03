@@ -1,8 +1,13 @@
 Template.results.events({
   'click .user': function(){
+    if(!Meteor.userId()) {
+      Router.go('entrySignIn');
+      return false;
+    }
+
     var partnerId = this._id;
     var ids = {
-      userId: Meteor.user()._id,
+      userId: Meteor.userId(),
       partnerId: partnerId
     };
 
