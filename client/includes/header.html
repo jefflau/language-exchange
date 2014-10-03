@@ -1,0 +1,17 @@
+<template name="header">
+  {{>notifications}}
+  <header class="header" role="navigation">
+    <a class="nav-button"><i class="fa fa-bars"></i></a>
+    <a class="brand" href="/">Language<br>Swap<span>.in</span></a>
+    <ul class="main-nav">
+      <li><a href="/">Find a Partner</a></li>
+      {{#if currentUser}}
+        <li><a href="{{pathFor 'messages'}}">Messages</a></li>
+        <li><a href="/profile">Profile</a></li>
+        <li><a href="/sign-out">Sign out</a></li>
+      {{else}}
+        <li><a href="/sign-in">Sign in</a></li>
+      {{/if}}
+    </ul>
+  </header>
+</template>

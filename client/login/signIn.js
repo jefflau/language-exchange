@@ -1,0 +1,1 @@
+Template.signIn.replaces("entrySignIn");
