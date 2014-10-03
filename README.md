@@ -8,5 +8,5 @@ A language exchange app built with Meteor.
 
 ```bash
 > cd language-exchange
-> meteor add iron:router
+> meteor
 ```
