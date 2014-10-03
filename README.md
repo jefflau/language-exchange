@@ -4,10 +4,9 @@ Language Swap
 A language exchange app built with Meteor.
 
 
-## Quick Start
-Create some routes in a client/server JavaScript file:
+## Running the Meteor App
 
 ```bash
-> cd language
+> cd language-exchange
 > meteor add iron:router
 ```
