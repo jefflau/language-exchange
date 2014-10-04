@@ -33,6 +33,11 @@ Template.results.events({
   }
 });
 
-Template.results.currentChat = function(){
-  return !Session.equals('currentChat', null);
-};
+Template.results.helpers({ 
+  currentChat: function(){
+    return !Session.equals('currentChat', null);
+  },
+  hasData: function(data) {
+    return data.count() > 0 ? true : false; 
+  }
+});

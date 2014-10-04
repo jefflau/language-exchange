@@ -1,0 +1,1 @@
+Template.forgotPassword.replaces('entryForgotPassword');

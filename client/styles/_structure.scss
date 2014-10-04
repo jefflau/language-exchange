@@ -2,6 +2,10 @@
   box-sizing: border-box;
 }
 
+a {
+  color: $brand-color;
+}
+
 ul {
   padding: 0;
 }
@@ -16,6 +20,12 @@ body {
   margin: 0;
 }
 
+h3 {
+  letter-spacing: -1px;
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 20px;
+}
 
 /* Shared styles */
 
@@ -23,6 +33,7 @@ body {
   background: rgba(128, 204, 238, 1);
   font-size: 14px;
   border: 0;
+  margin: 0;
   color: white;
   padding: 15px 20px;
 
@@ -44,7 +55,6 @@ body {
   border: 1px #ccc solid;
   height: 31px;
   box-shadow: inset 0px 1px 3px 0px rgba(0,0,0,0.13);
-  float: right;
   padding: 8px 8px 8px 5px;
   width: 250px;
 }

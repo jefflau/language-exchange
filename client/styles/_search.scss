@@ -2,6 +2,10 @@
   padding-left: 25px;
   width: 400px;
 
+  .input {
+    float: right;
+  }
+
   @include bp(baby-bear) {
   	width: 100%;
   }

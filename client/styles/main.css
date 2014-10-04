@@ -12,6 +12,9 @@
 * {
   box-sizing: border-box; }
 
+a {
+  color: #F67114; }
+
 ul {
   padding: 0; }
 
@@ -23,11 +26,18 @@ body {
   padding: 0;
   margin: 0; }
 
+h3 {
+  letter-spacing: -1px;
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 20px; }
+
 /* Shared styles */
 .button {
   background: #80ccee;
   font-size: 14px;
   border: 0;
+  margin: 0;
   color: white;
   padding: 15px 20px; }
   .button:hover {
@@ -45,7 +55,6 @@ body {
   border: 1px #ccc solid;
   height: 31px;
   box-shadow: inset 0px 1px 3px 0px rgba(0, 0, 0, 0.13);
-  float: right;
   padding: 8px 8px 8px 5px;
   width: 250px; }
 
@@ -64,7 +73,7 @@ body {
   display: none; }
 
 .aside-button {
-  background: #f67114;
+  background: #F67114;
   color: white;
   padding: 5px 8px;
   display: none;
@@ -134,7 +143,7 @@ li.notification.info {
   background-color: #80ccee; }
 
 .header {
-  background: #f67114;
+  background: #F67114;
   height: 100%;
   padding: 15px 0 0 0;
   width: 120px;
@@ -181,6 +190,8 @@ li.notification.info {
 .search {
   padding-left: 25px;
   width: 400px; }
+  .search .input {
+    float: right; }
   @media (max-width: 650px) {
     .search {
       width: 100%; } }
@@ -308,3 +319,13 @@ li.notification.info {
     .chat-input [type=submit]:hover {
       cursor: pointer;
       background: #f88f45; }
+
+.entry {
+  margin-top: 0;
+  padding: 25px; }
+
+.entry h3 {
+  text-align: left; }
+
+.entry-signup-cta {
+  text-align: left; }
