@@ -285,6 +285,7 @@ li.notification.info {
   height: calc(100% - 72px);
   width: 350px; }
   .chat-thread ul {
+    margin: 0;
     padding: 32px; }
   @media (max-width: 650px) {
     .chat-thread {
