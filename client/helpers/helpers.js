@@ -9,3 +9,7 @@ Template.registerHelper("selectedLanguage", function(language, option) {
 Template.registerHelper("stringifyObject", function(val, options) {
   return EJSON.stringify(val, options);
 });
+
+Template.registerHelper("prettifyDate", function(timestamp){
+	return moment(timestamp).fromNow();
+});

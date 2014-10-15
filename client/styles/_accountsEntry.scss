@@ -1,12 +1,22 @@
 .entry {
 	margin-top: 0;
 	padding: 25px;
+	.entry-signup-cta,
+	.entry-signin-cta {
+		text-align: left;
+	}
 }
 
 .entry h3 {
 	text-align: left;
 }
 
-.entry-signup-cta {
-	text-align: left;
+.entry .input-group {
+	.input {
+		float: right;
+	}
+
+	.label {
+		float: left;
+	}
 }

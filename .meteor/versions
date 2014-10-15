@@ -48,6 +48,7 @@ minimongo@1.0.3
 mobile-status-bar@1.0.0
 mongo@1.0.6
 mrt:accounts-t9n@0.0.13
+mrt:moment@2.8.1
 mrt:underscore-string-latest@2.3.3
 natestrauser:font-awesome@4.2.0
 npm-bcrypt@0.7.7

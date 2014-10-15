@@ -1,9 +1,18 @@
 <template name="messages">
   <div class="main" role="main">
-    <div class="users">
+    <div class="messages">
       {{#each threads}}
-        <div class="user cf">
-          <div class="name">{{firstName}}</div>
+        <div class="inbox-message cf">
+          <div class="inbox-message-name">{{firstName}}</div>
+          {{#with lastMessage messages}}
+          <div class="inbox-message-date">
+            {{prettifyDate dateCreated}}
+          </div>
+          <div class="inbox-message-text">
+            {{message}}
+          </div>
+          {{/with}}
+
         </div>
       {{/each}}
     </div>

@@ -1,0 +1,1 @@
+Template.signUp.replaces("entrySignUp");

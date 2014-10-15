@@ -59,7 +59,8 @@ h3 {
   width: 250px; }
 
 .input-group {
-  margin-bottom: 15px; }
+  margin-bottom: 15px;
+  max-width: 550px; }
 
 [role="navigation"],
 [role="main"],
@@ -217,7 +218,7 @@ li.notification.info {
   height: 100%; }
 
 .user {
-  border-bottom: 2px solid #D8D8D8;
+  border-bottom: 1px solid #D8D8D8;
   border-right: 1px solid #D8D8D8;
   padding: 35px 30px 40px 30px;
   position: relative;
@@ -321,12 +322,39 @@ li.notification.info {
       cursor: pointer;
       background: #f88f45; }
 
+.inbox-message {
+  padding: 15px;
+  position: relative;
+  width: 550px;
+  border-bottom: 1px solid #D8D8D8;
+  border-right: 1px solid #D8D8D8; }
+
+.inbox-message-name {
+  float: left;
+  font-weight: bold;
+  width: 50%; }
+
+.inbox-message-date {
+  float: left;
+  text-align: right;
+  width: 50%; }
+
+.inbox-message-text {
+  color: #aaa;
+  float: left;
+  padding-top: 10px; }
+
 .entry {
   margin-top: 0;
   padding: 25px; }
+  .entry .entry-signup-cta,
+  .entry .entry-signin-cta {
+    text-align: left; }
 
 .entry h3 {
   text-align: left; }
 
-.entry-signup-cta {
-  text-align: left; }
+.entry .input-group .input {
+  float: right; }
+.entry .input-group .label {
+  float: left; }
