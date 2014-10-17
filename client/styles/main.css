@@ -159,13 +159,14 @@ li.notification.info {
   list-style: none;
   width: 100%; }
   .main-nav li {
-    padding: 15px 0 15px 15px;
     font-size: 14px;
     width: 100%; }
     .main-nav li:hover {
       background: rgba(255, 255, 255, 0.3); }
   .main-nav a {
     color: white;
+    display: block;
+    padding: 15px 0 15px 15px;
     text-decoration: none; }
 
 .brand {
@@ -186,7 +187,8 @@ li.notification.info {
   background: #F67114;
   position: absolute;
   left: 100%;
-  top: 0; }
+  top: 0;
+  z-index: 100; }
 
 .search {
   padding-left: 25px;

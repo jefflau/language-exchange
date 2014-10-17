@@ -3,6 +3,8 @@ Template.registerHelper("languages", function() {
 });
 
 Template.registerHelper("selectedLanguage", function(language, option) {
+	if (!language)
+		return '';
   return language.code === option.code ? 'selected' : '';
 });
 

@@ -32,7 +32,11 @@ Template.chatThread.events({
         userId: Meteor.userId(),
         dateCreated: new Date()
       };
-      Threads.update(Session.get('currentChat'), {$push: {messages: message}}, function(err){
+      Threads.update(Session.get('currentChat'), 
+      {
+        $push: {messages: message},
+        $set: {lastMessage: message.dateCreated}
+      }, function(err){
         if(err)
           console.error(err);
         else

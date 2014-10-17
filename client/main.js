@@ -1,7 +1,7 @@
 Meteor.startup(function(){
   AccountsEntry.settings = {
     homeRoute: '/',
-    dashboardRoute: '/',
+    dashboardRoute: '/profile',
     profileRoute: 'profile',
     passwordSignupFields: 'EMAIL_ONLY'
   };

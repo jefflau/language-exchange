@@ -1,6 +1,6 @@
 Template.messages.helpers({
   threads: function() {
-    var threads = Threads.find({users: Meteor.userId()});
+    var threads = Threads.find({users: Meteor.userId()}, {sort: {lastMessage: -1}});
     return threads.map(function(thread){
       var partnerId;
       var partner;
@@ -29,5 +29,9 @@ Template.messages.helpers({
 Template.messages.events({
   'click .inbox-message': function(e, template) {
       Session.set('currentChat', this._id);
+      $('body').addClass('active-sidebar');
+  },
+  'click .aside-button': function(e, template) {
+    $('body').removeClass('active-sidebar');
   }
 });

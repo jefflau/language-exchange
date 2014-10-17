@@ -28,7 +28,6 @@ Template.results.events({
     }
   },
   'click .aside-button': function(e, template) {
-    console.log('shit happened')
     $('body').removeClass('active-sidebar');
   }
 });

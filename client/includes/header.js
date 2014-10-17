@@ -9,7 +9,7 @@ Template.header.events({
 		e.preventDefault();
 		$('body').toggleClass('active-nav');
 	},
-	'click [role="main"]': function() {
-		console.log('main');
+	'click .main-nav a': function(){
+		$('body').removeClass('active-nav');
 	}
 });

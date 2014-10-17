@@ -1,25 +1,28 @@
 <template name="chatThread">
-  <div class="chat-thread">
-    {{#with thread}}
-    <ul>
-      {{#each messages}}
-        {{#if ownMessage userId}}
-          <li class="message owned">
-            <span class="name">You:</span>
-            {{message}}
-          </li>
-        {{else}}
-          <li class="message">
-            <span class="name">{{name}}:</span>
-            {{message}}
-          </li>
-        {{/if}}
-      {{/each}}
-    </ul>
-    {{/with}}
-    <form class="chat-input">
-      <input class="input" type="text" id="text">
-      <input id="sendMessage" type="submit" value="Send">
-    </form>
-  </div>
+  <aside class="aside" role="complementary">
+    <div class="aside-button"><i class="fa fa-arrow-left fa-lg"></i></div>
+    <div class="chat-thread">
+      {{#with thread}}
+      <ul>
+        {{#each messages}}
+          {{#if ownMessage userId}}
+            <li class="message owned">
+              <span class="name">You:</span>
+              {{message}}
+            </li>
+          {{else}}
+            <li class="message">
+              <span class="name">{{name}}:</span>
+              {{message}}
+            </li>
+          {{/if}}
+        {{/each}}
+      </ul>
+      {{/with}}
+      <form class="chat-input">
+        <input class="input" type="text" id="text">
+        <input id="sendMessage" type="submit" value="Send">
+      </form>
+    </div>
+  </aside>
 </template>
