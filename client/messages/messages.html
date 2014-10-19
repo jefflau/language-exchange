@@ -6,7 +6,7 @@
           <div class="inbox-message-name">{{firstName}}</div>
           {{#with lastMessage messages}}
           <div class="inbox-message-date">
-            {{prettifyDate dateCreated}}
+            {{dateFromNow dateCreated}}
           </div>
           <div class="inbox-message-text">
             {{message}}

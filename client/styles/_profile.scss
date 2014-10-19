@@ -1,33 +1,54 @@
-.profile {
+.form {
+  padding: 0 20px;
   padding-top: 20px;
   width: 550px;
+  @include bp(baby-bear) {
+    width: 100%;
+  }
   .label {
     height: 31px;
-    padding-left: 20px;
     padding-top: 3px;
     margin-top: 0;
     margin-bottom: 20px;
     width: 200px;
     text-align: left;
+    @include bp(baby-bear) {
+      margin-bottom: 0;
+    }
   }
   .input {
     height: 31px;
     float: right;
     margin-bottom: 20px;
-    width: 325px;
+    width: 305px;
+    @include bp(baby-bear) {
+      float: left;
+      width: 100%;
+    }
   }
 
-  .label-bio {
+  .label-textarea {
     height: 150px;
+    @include bp(baby-bear) {
+      height: 31px;
+    }
   }
 
-  #bio {
+  .textarea {
     height: 150px;
-    width: 325px;
+    width: 305px;
+    @include bp(baby-bear) {
+      float: left;
+      width: 100%;
+    }
   }
 
-  .profile-save {
+  .submit {
     float: right;
     margin-bottom: 20px;
   }
+}
+
+.input.invalid {
+ border: 1px red solid; 
 }

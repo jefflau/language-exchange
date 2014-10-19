@@ -1,5 +1,11 @@
 Threads = new Mongo.Collection('threads');
 
+Threads.allow({
+  update: function(){
+    return true;
+  }
+});
+
 Meteor.methods({
   'createChatThread': function(ids){
     //create chatthread

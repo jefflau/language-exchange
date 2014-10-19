@@ -50,6 +50,9 @@ h3 {
   margin-top: 5px;
   color: #A2A2A2;
   text-transform: uppercase; }
+  @media (max-width: 650px) {
+    .label, .search-label {
+      margin-bottom: 10px; } }
 
 .input {
   border: 1px #ccc solid;
@@ -57,6 +60,9 @@ h3 {
   box-shadow: inset 0px 1px 3px 0px rgba(0, 0, 0, 0.13);
   padding: 8px 8px 8px 5px;
   width: 250px; }
+  @media (max-width: 650px) {
+    .input {
+      width: 100%; } }
 
 .input-group {
   margin-bottom: 15px;
@@ -197,6 +203,7 @@ li.notification.info {
     float: right; }
   @media (max-width: 650px) {
     .search {
+      padding: 0 25px;
       width: 100%; } }
 
 .search-intro {
@@ -243,30 +250,50 @@ li.notification.info {
       border-right: none;
       width: 100%; } }
 
-.profile {
+.form {
+  padding: 0 20px;
   padding-top: 20px;
   width: 550px; }
-  .profile .label {
+  @media (max-width: 650px) {
+    .form {
+      width: 100%; } }
+  .form .label {
     height: 31px;
-    padding-left: 20px;
     padding-top: 3px;
     margin-top: 0;
     margin-bottom: 20px;
     width: 200px;
     text-align: left; }
-  .profile .input {
+    @media (max-width: 650px) {
+      .form .label {
+        margin-bottom: 0; } }
+  .form .input {
     height: 31px;
     float: right;
     margin-bottom: 20px;
-    width: 325px; }
-  .profile .label-bio {
+    width: 305px; }
+    @media (max-width: 650px) {
+      .form .input {
+        float: left;
+        width: 100%; } }
+  .form .label-textarea {
     height: 150px; }
-  .profile #bio {
+    @media (max-width: 650px) {
+      .form .label-textarea {
+        height: 31px; } }
+  .form .textarea {
     height: 150px;
-    width: 325px; }
-  .profile .profile-save {
+    width: 305px; }
+    @media (max-width: 650px) {
+      .form .textarea {
+        float: left;
+        width: 100%; } }
+  .form .submit {
     float: right;
     margin-bottom: 20px; }
+
+.input.invalid {
+  border: 1px red solid; }
 
 .aside {
   float: left;
@@ -330,6 +357,9 @@ li.notification.info {
   width: 550px;
   border-bottom: 1px solid #D8D8D8;
   border-right: 1px solid #D8D8D8; }
+  @media (max-width: 650px) {
+    .inbox-message {
+      width: 100%; } }
 
 .inbox-message-name {
   float: left;

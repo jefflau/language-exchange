@@ -1,0 +1,44 @@
+<template name='register'>
+  <div class="main" role="main">
+  	<form class="form register">
+  		<label for="firstName" class="label required">Email:</label>
+      <input class="input" type="email" id="email">
+
+      <label for="firstName" class="label required">Password: </label>
+      <input class="input" type="password" id="password">
+
+      <label for="firstName" class="label required">First Name:</label>
+      <input class="input" type="text" id="firstName">
+
+      <label for="lastName" class="label">Last Name:</label>
+      <input class="input" type="text" id="lastName">
+
+      <label for="age" class="label required">Age:</label>
+      <input class="input" type="text" id="age">
+
+      <label for="country" class="label required">Country:</label>
+      <input class="input" type="text" id="country">
+
+      <label for="city" class="label">City:</label>
+      <input class="input" type="text" id="city">
+
+      <label for="targetLanguage" class="label required">I want to learn:</label>
+      <select class="input" id="targetLanguage">
+        {{#each languages}}
+          <option {{selectedLanguage ../profile.targetLanguage this}} value="{{stringifyObject this}}">{{this.name}}</option>
+        {{/each}}
+      </select>
+
+      <label for="nativeLanguage" class="label required">My native language is:</label>
+      <select class="input" id="nativeLanguage">
+        {{#each languages}}
+          <option {{selectedLanguage ../profile.nativeLanguage this}} value="{{stringifyObject this}}">{{this.name}}</option>
+        {{/each}}
+      </select>
+
+      <label for="bio" class="label label-textarea">Bio:</label>
+      <textarea id="bio" class="input textarea">{{profile.bio}}</textarea>
+      <input class="button submit" type="submit" value="Register">
+    </form>
+  </div>
+</template>

@@ -4,6 +4,9 @@
   width: 550px;
   border-bottom: 1px solid #D8D8D8;
   border-right: 1px solid #D8D8D8;
+  @include bp(baby-bear) {
+  	width: 100%;
+  }
 }
 
 .inbox-message-name {

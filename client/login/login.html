@@ -1,0 +1,11 @@
+<template name='login'>
+  <div class="main" role="main">
+  	<form class="login-form">
+	    <input class="input" type="email" id="login-email">
+	    <input class="input" type="password" id="login-password">
+	    <input class="button" type="submit">
+	    <div class="forgot-password">If you forgot your password <a href="{{pathFor 'forgotPassword'}}">click here</a></div>
+	    Or <a href="{{pathFor 'register'}}">register here</a>
+	  </form>
+  </div>
+</template>

@@ -49,6 +49,9 @@ h3 {
   margin-top: 5px;
   color: #A2A2A2;
   text-transform: uppercase;
+  @include bp(baby-bear) {
+    margin-bottom: 10px;
+  }
 }
 
 .input {
@@ -57,6 +60,9 @@ h3 {
   box-shadow: inset 0px 1px 3px 0px rgba(0,0,0,0.13);
   padding: 8px 8px 8px 5px;
   width: 250px;
+  @include bp(baby-bear) {
+    width: 100%;
+  }
 }
 
 .input-group {

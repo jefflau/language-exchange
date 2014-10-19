@@ -9,7 +9,7 @@
             <div class="learning results-label"><span class="label">Learning:</span>{{profile.targetLanguage.name}}</div>
             <div class="speaks results-label"><span class="label">Speaks:</span>{{profile.nativeLanguage.name}}</div>
             <div class="bio results-label">{{profile.bio}}</div>
-            <div class="last-login results-label"><span class="label">Last login:</span>14 mins ago</div>
+            <div class="last-login results-label"><span class="label">Last login:</span>{{dateFromNow profile.lastLogin}}</div>
             <i class="fa fa-angle-right fa-4x arrow"></i>
           </div>
         {{/each}}
