@@ -1,20 +1,24 @@
 <template name="messages">
   <div class="main" role="main">
     <div class="messages">
-      {{#each threads}}
-        <div class="inbox-message cf">
-          <div class="inbox-message-name">{{firstName}}</div>
-          {{#with lastMessage messages}}
-          <div class="inbox-message-date">
-            {{dateFromNow dateCreated}}
-          </div>
-          <div class="inbox-message-text">
-            {{message}}
-          </div>
-          {{/with}}
+      {{#if hasThreads}}
+        {{#each threads}}
+          <div class="inbox-message cf">
+            <div class="inbox-message-name">{{firstName}}</div>
+            {{#with lastMessage messages}}
+            <div class="inbox-message-date">
+              {{dateFromNow dateCreated}}
+            </div>
+            <div class="inbox-message-text">
+              {{message}}
+            </div>
+            {{/with}}
 
-        </div>
-      {{/each}}
+          </div>
+        {{/each}}
+      {{else}}
+        <h3 class="padding-no-top">No messages yet! Go <a href="{{pathFor 'home'}}">find a partner</a></h3>
+      {{/if}}
     </div>
   </div>
   {{#if currentChat}}

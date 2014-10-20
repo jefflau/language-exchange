@@ -1,6 +1,16 @@
 Template.profile.events({
   "submit form": function(e, template) {
     e.preventDefault();
+    var formValid = true;
+
+    $('.required').each(function(){
+      var id = $(this).attr('for');
+      var input = $('#'+id);
+      if(!Validation.isNotEmpty(input.val()))
+        $(input).addClass('invalid');
+
+      formValid = false;
+    });
 
     var profile = {
       firstName: template.find('#firstName').value,
@@ -15,13 +25,14 @@ Template.profile.events({
     user = {
       profile: profile
     };
-
-    Meteor.call('updateUser', user, function(err){
-      if(err) {
-        console.log(err);
-      } else {
-        Notifications.info('Profile updated!', 'Successfully saved.');
-      }
-    });
+    if(formValid){
+      Meteor.call('updateUser', user, function(err){
+        if(err) {
+          console.log(err);
+        } else {
+          Notifications.info('Profile updated!', 'Successfully saved.');
+        }
+      });
+    }
   }
 });

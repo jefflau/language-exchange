@@ -1,0 +1,27 @@
+{
+  // Server authentication info
+  "servers": [
+    {
+      "host": "178.62.17.147",
+      "username": "root",
+      "pem": "~/.ssh/id_rsa"
+    }
+  ],
+
+  // Install MongoDB in the server, does not destroy local MongoDB on future setup
+  "setupMongo": true,
+
+  "setupPhantom": false,
+
+  // Location of app (local directory)
+  "app": "/Users/jefflau/Projects/languageswap",
+
+  "setupNode": true,
+
+  "appName": "languageswap",
+
+  // Configure environment
+  "env": {
+    "ROOT_URL": "http://www.languageswap.in"
+  }
+}

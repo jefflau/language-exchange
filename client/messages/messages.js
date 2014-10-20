@@ -23,6 +23,9 @@ Template.messages.helpers({
   },
   lastMessage: function(messages){
     return messages[messages.length-1];
+  },
+  hasThreads: function(){
+    return Threads.find({users: Meteor.userId()}).count() > 0 ? true : false;
   }
 });
 

@@ -6,8 +6,9 @@
 standard-app-packages
 iron:router
 accounts-password
-mdj:notifications
 natestrauser:font-awesome
 aldeed:template-extension
 mrt:moment
 accounts-base
+gfk:notifications
+

@@ -1,11 +1,14 @@
 <template name='login'>
   <div class="main" role="main">
-  	<form class="login-form">
+  	<form class="login-form padding-no-top form">
+  		<h3>Login</h3>
+  		<label class="label" for="login-email">Email</label>
 	    <input class="input" type="email" id="login-email">
+	    <label class="label" for="login-password">Password</label>
 	    <input class="input" type="password" id="login-password">
-	    <input class="button" type="submit">
-	    <div class="forgot-password">If you forgot your password <a href="{{pathFor 'forgotPassword'}}">click here</a></div>
-	    Or <a href="{{pathFor 'register'}}">register here</a>
+	    <div class="cf"></div>
+	    <input class="button" type="submit" value="Login">
+	    Or <a href="{{pathFor 'register'}}">Register here</a>
 	  </form>
   </div>
 </template>

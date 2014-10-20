@@ -10,7 +10,7 @@ Template.forgotPassword.events({
       e.preventDefault()
       var email = trimInput(t.find('#recovery-email').value)
 
-      if (isNotEmpty(email) && isEmail(email)) {
+      if (Validation.isNotEmpty(email) && Validation.isEmail(email)) {
         Session.set('loading', true);
         Accounts.forgotPassword({email: email}, function(err){
         if (err)
@@ -27,7 +27,7 @@ Template.forgotPassword.events({
     'submit #new-password' : function(e, t) {
       e.preventDefault();
       var pw = t.find('#new-password-password').value;
-      if (isNotEmpty(pw) && isValidPassword(pw)) {
+      if (Validation.isNotEmpty(pw) && Validation.isValidPassword(pw)) {
         Session.set('loading', true);
         Accounts.resetPassword(Session.get('resetPassword'), pw, function(err){
           if (err)

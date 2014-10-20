@@ -1,7 +1,8 @@
 <template name="chatThread">
   <aside class="aside" role="complementary">
     <div class="aside-button"><i class="fa fa-arrow-left fa-lg"></i></div>
-    <div class="chat-thread">
+    {{#if currentUser}}
+      <div class="chat-thread">
       {{#with thread}}
       <ul>
         {{#each messages}}
@@ -24,5 +25,8 @@
         <input id="sendMessage" type="submit" value="Send">
       </form>
     </div>
-  </aside>
+    {{else}}
+      <h3 class="padding">Please <a href="{{pathFor 'login'}}">login</a> to chat to start language swapping!</h3>
+    {{/if}}
+  </aside> 
 </template>

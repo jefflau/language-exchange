@@ -30,7 +30,7 @@ h3 {
   letter-spacing: -1px;
   font-size: 18px;
   font-weight: bold;
-  margin-top: 20px; }
+  margin-top: 0; }
 
 /* Shared styles */
 .button {
@@ -68,6 +68,12 @@ h3 {
   margin-bottom: 15px;
   max-width: 550px; }
 
+.padding, .padding-no-top {
+  padding: 25px; }
+
+.padding-no-top {
+  padding-top: 0; }
+
 [role="navigation"],
 [role="main"],
 [role="complementary"] {
@@ -96,7 +102,7 @@ h3 {
   [role="main"] {
     height: 100%;
     margin-left: 0;
-    padding-top: 20px;
+    padding-top: 40px;
     float: left;
     width: 100%; }
     [role="main"]:before {
@@ -108,6 +114,7 @@ h3 {
       z-index: -1; }
 
   [role="complementary"] {
+    padding-top: 20px;
     margin-right: -200%;
     float: right;
     width: 100%; }
@@ -294,6 +301,9 @@ li.notification.info {
 
 .input.invalid {
   border: 1px red solid; }
+
+.required:after {
+  content: " *"; }
 
 .aside {
   float: left;

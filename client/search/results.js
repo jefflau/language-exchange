@@ -1,9 +1,5 @@
 Template.results.events({
   'click .user': function(){
-    if(!Meteor.userId()) {
-      Router.go('entrySignIn');
-      return false;
-    }
 
     var partnerId = this._id;
     var ids = {
@@ -19,7 +15,7 @@ Template.results.events({
     } else {
       Meteor.call('createChatThread', ids, function(err, id){
         if(err){
-          console.log(err);
+          console.error(err);
         } else {
           Session.set("currentChatThread", id);
           $('body').addClass('active-sidebar');
