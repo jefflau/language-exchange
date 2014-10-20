@@ -4,7 +4,8 @@ Template.search.events({
 
     var form = {
       nativeLanguage: template.find('#speaks').value,
-      targetLanguage: template.find('#learning').value
+      targetLanguage: template.find('#learning').value,
+      city: template.find('#city').value
     };
 
     Session.set('currentChat', null);

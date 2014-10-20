@@ -1,27 +1,3 @@
-var trimInput = function(val) {
-  return val.replace(/^\s*|\s*$/g, "");
-};
-
-var isValidPassword = function(val) {
-  return val.length >= 6 ? true : false; 
-};
-
-var isNotEmpty = function(val) {
-	val.length > 0;
-};
-
-var isGreaterThanTwo = function(val) {
-
-};
-
-var isTargetNativeDifferent = function(lang1, lang2) {
-	return lang1 === lang2 ? true : false; 
-};
-
-var removeInvalid = function(){
-	$('form input').removeClass('invalid');
-};
-
 Template.register.events({
   "submit form": function(e, template) {
     e.preventDefault();

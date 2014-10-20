@@ -10,11 +10,15 @@
       <label for="age" class="label">Age:</label>
       <input class="input" type="text" id="age" value="{{profile.age}}">
 
-      <label for="country" class="label">Country:</label>
-      <input class="input" type="text" id="country" value="{{profile.country}}">
-
       <label for="city" class="label">City:</label>
       <input class="input" type="text" id="city" value="{{profile.city}}">
+
+      <label for="country" class="label">Country:</label>
+      <select class="input" id="country">
+        {{#each countries}}
+          <option {{selectedCountry ../profile.country this}} value="{{this}}">{{this}}</option>
+        {{/each}}
+      </select>
 
       <label for="targetLanguage" class="label">I want to learn:</label>
       <select class="input" id="targetLanguage">

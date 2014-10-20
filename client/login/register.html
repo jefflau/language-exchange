@@ -17,7 +17,11 @@
       <input class="input" type="text" id="age">
 
       <label for="country" class="label required">Country:</label>
-      <input class="input" type="text" id="country">
+      <select class="input" id="country">
+        {{#each countries}}
+          <option value="{{this}}">{{this}}</option>
+        {{/each}}
+      </select>
 
       <label for="city" class="label">City:</label>
       <input class="input" type="text" id="city">

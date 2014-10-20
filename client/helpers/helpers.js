@@ -8,6 +8,14 @@ Template.registerHelper("selectedLanguage", function(language, option) {
   return language.code === option.code ? 'selected' : '';
 });
 
+Template.registerHelper("countries", function(){
+	return countries;
+});
+
+Template.registerHelper("selectedCountry", function(country, option){
+	return country === option ? 'selected' : '';
+});
+
 Template.registerHelper("stringifyObject", function(val, options) {
   return EJSON.stringify(val, options);
 });
