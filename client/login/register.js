@@ -24,7 +24,8 @@ Template.register.events({
       targetLanguage: targetLanguage,
       nativeLanguage: nativeLanguage,
       age: template.find('#age').value,
-      bio: template.find('#bio').value
+      bio: template.find('#bio').value,
+      unread: 0
     };
 
     $('.required').each(function(){

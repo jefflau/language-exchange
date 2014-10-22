@@ -6,7 +6,7 @@
     <ul class="main-nav">
       <li><a href="/">Find a Partner</a></li>
       {{#if currentUser}}
-        <li><a href="{{pathFor 'messages'}}">Messages</a></li>
+        <li><a href="{{pathFor 'messages'}}">Messages {{hasUnread}}</a></li>
         <li><a href="/profile">Profile</a></li>
         <li><a href="/logout">Log out</a></li>
       {{else}}

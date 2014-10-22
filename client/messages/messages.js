@@ -26,6 +26,10 @@ Template.messages.helpers({
   },
   hasThreads: function(){
     return Threads.find({users: Meteor.userId()}).count() > 0 ? true : false;
+  },
+  hasUnread: function(unread){
+    console.log(unread[Meteor.userId()]);
+    return unread[Meteor.userId()] > 0 ? 'unread' : '';
   }
 });
 
@@ -33,6 +37,20 @@ Template.messages.events({
   'click .inbox-message': function(e, template) {
       Session.set('currentChat', this._id);
       $('body').addClass('active-sidebar');
+      var amount = this.unread[Meteor.userId()];
+      console.log(amount);
+      var key = 'unread.' + Meteor.userId();
+      var action = {};
+      action[key] = 0;
+      Threads.update({_id: this._id}, {$set: action}, function(err){
+        if(err){
+          console.error(err);
+        } else {
+          Meteor.call('decrementUnread', amount, function(){
+            console.log('decrement complete');
+          })
+        }
+      });
   },
   'click .aside-button': function(e, template) {
     $('body').removeClass('active-sidebar');

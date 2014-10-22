@@ -16,12 +16,13 @@
   // Location of app (local directory)
   "app": "/Users/jefflau/Projects/languageswap",
 
-  "setupNode": true,
+  "setupNode": false,
 
   "appName": "languageswap",
 
   // Configure environment
   "env": {
-    "ROOT_URL": "http://www.languageswap.in"
+    "PORT": 4003,
+    "ROOT_URL": "http://languageswap.in"
   }
 }

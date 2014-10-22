@@ -13,8 +13,12 @@ Meteor.methods({
       messages: [],
       dateCreated: new Date(),
       lastMessage: null,
-      users: [ids.userId, ids.partnerId]
+      users: [ids.userId, ids.partnerId],
+      unread: {}
     };
+
+    thread.unread[ids.userId] = 0;
+    thread.unread[ids.partnerId] = 0;
 
     threadId = Threads.insert(thread);
 

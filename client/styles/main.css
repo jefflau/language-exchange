@@ -114,7 +114,6 @@ h3 {
       z-index: -1; }
 
   [role="complementary"] {
-    padding-top: 20px;
     margin-right: -200%;
     float: right;
     width: 100%; }

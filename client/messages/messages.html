@@ -3,7 +3,7 @@
     <div class="messages">
       {{#if hasThreads}}
         {{#each threads}}
-          <div class="inbox-message cf">
+          <div class="inbox-message cf {{hasUnread unread}}">
             <div class="inbox-message-name">{{firstName}}</div>
             {{#with lastMessage messages}}
             <div class="inbox-message-date">

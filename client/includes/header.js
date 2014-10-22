@@ -1,6 +1,10 @@
 Template.header.helpers({
 	userId: function() {
 	  return Meteor.userId();
+	},
+	hasUnread: function(){
+		var unread = Meteor.user().profile.unread;
+		return unread > 0 ? '(' + unread + ')' : '';
 	}
 });
 
