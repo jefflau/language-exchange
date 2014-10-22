@@ -38,7 +38,6 @@ Template.messages.events({
       Session.set('currentChat', this._id);
       $('body').addClass('active-sidebar');
       var amount = this.unread[Meteor.userId()];
-      console.log(amount);
       var key = 'unread.' + Meteor.userId();
       var action = {};
       action[key] = 0;
@@ -46,9 +45,7 @@ Template.messages.events({
         if(err){
           console.error(err);
         } else {
-          Meteor.call('decrementUnread', amount, function(){
-            console.log('decrement complete');
-          })
+          Meteor.call('decrementUnread', amount);
         }
       });
   },
