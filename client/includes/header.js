@@ -9,7 +9,7 @@ Template.header.helpers({
 });
 
 Template.header.events({
-	'click .nav-button': function(e, template){
+	'click .nav-button, touchstart .nav-button': function(e, template){
 		e.preventDefault();
 		$('body').toggleClass('active-nav');
 	},

@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Fira+Sans:700|Roboto:400,500);
+@import url(http://fonts.googleapis.com/css?family=Fira+Sans:700|Roboto:400,500,700);
 .cf:before,
 .cf:after {
   content: " ";
@@ -45,7 +45,8 @@ h3 {
 
 .label, .search-label {
   float: left;
-  font-family: Roboto-Bold;
+  font-family: Roboto;
+  font-weight: bold;
   font-size: 14px;
   margin-top: 5px;
   color: #A2A2A2;
@@ -185,6 +186,7 @@ li.notification.info {
   color: white;
   display: block;
   font-family: 'Fira Sans', sans-serif;
+  font-weight: bold;
   font-size: 18px;
   line-height: 1em;
   padding-left: 15px;
