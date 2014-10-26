@@ -20,14 +20,14 @@
         {{/each}}
       </select>
 
-      <label for="targetLanguage" class="label required">I want to learn</label>
+      <label for="targetLanguage" class="label required">I am learning</label>
       <select class="input" id="targetLanguage">
         {{#each languages}}
           <option {{selectedLanguage ../profile.targetLanguage this}} value="{{stringifyObject this}}">{{this.name}}</option>
         {{/each}}
       </select>
 
-      <label for="nativeLanguage" class="label required">My native language is</label>
+      <label for="nativeLanguage" class="label required">I speak</label>
       <select class="input" id="nativeLanguage">
         {{#each languages}}
           <option {{selectedLanguage ../profile.nativeLanguage this}} value="{{stringifyObject this}}">{{this.name}}</option>
